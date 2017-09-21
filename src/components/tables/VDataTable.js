@@ -310,13 +310,27 @@ export default {
   },
 
   render (h) {
-    return h('v-table-overflow', {}, [
+    return h('v-table-overflow', {
+      'class': 'table--fill'
+    }, [
       h('table', {
         'class': this.classes
       }, [
-        this.genTHead(),
-        this.genTProgress(),
-        this.genTBody(),
+        this.genTHead()
+      ]),
+      h('div', {
+        'class': 'table--scroll-container'
+      }, [
+        h('table', {
+          'class': this.classes
+        }, [
+          this.genTProgress(),
+          this.genTBody()
+        ])
+      ]),
+      h('table', {
+        'class': this.classes
+      }, [
         this.genTFoot()
       ])
     ])

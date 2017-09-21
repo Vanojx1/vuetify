@@ -1,9 +1,11 @@
 <template>
-  <playground></playground>
+  <v-app dark>
+    <playground></playground>
+  </v-app>
 </template>
 
 <script>
-  import Playground from './Playground'
+  import Playground from './Playground.vue'
 
   export default {
     components: {
@@ -13,5 +15,7 @@
 </script>
 
 <style lang="stylus">
-  @import '../src/stylus/main.styl'
+  @require '../src/stylus/main.styl'
+  .application
+    height: 100vh
 </style>
