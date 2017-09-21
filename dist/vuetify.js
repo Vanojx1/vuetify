@@ -2514,7 +2514,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 module.exports = {
 	"name": "vuetify",
-	"version": "0.14.10",
+	"version": "0.14.11",
 	"author": {
 		"name": "John Leider",
 		"email": "john.j.leider@gmail.com"
@@ -8364,9 +8364,17 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     this.updatePagination(Object.assign({}, this.defaultPagination, this.pagination));
   },
   render: function render(h) {
-    return h('v-table-overflow', {}, [h('table', {
+    return h('v-table-overflow', {
+      'class': 'table--fill'
+    }, [h('table', {
       'class': this.classes
-    }, [this.genTHead(), this.genTProgress(), this.genTBody(), this.genTFoot()])]);
+    }, [this.genTHead()]), h('div', {
+      'class': 'table--scroll-container'
+    }, [h('table', {
+      'class': this.classes
+    }, [this.genTProgress(), this.genTBody()])]), h('table', {
+      'class': this.classes
+    }, [this.genTFoot()])]);
   }
 });
 
