@@ -1,8 +1,16 @@
-﻿.DS_Store
+.DS_Store
 node_modules/
+.env
+
+# IDE user config
 .vscode/
-npm-debug.log
 .idea/
-coverage/
-Playground.vue
 .vs/
+
+# Logs
+yarn-error.log
+npm-debug.log
+lerna-debug.log
+
+# Istanbul coverage
+coverage/
